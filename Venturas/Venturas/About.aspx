@@ -8,11 +8,11 @@
             <div class="dropdown">
                     <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Pages
                         <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
+                   <%-- <ul class="dropdown-menu">
                         <li><a runat="server" href="~/">Category</a></li>
                         <li><a runat="server" href="~/About">Item</a></li>
                         <li><a runat="server" href="~/Contact">Output</a></li>
-                    </ul>
+                    </ul>--%>
                 </div><br />
             <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
             <asp:Button ID="Button1" runat="server" Text="Save" />
