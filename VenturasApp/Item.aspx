@@ -23,9 +23,9 @@
                     <Columns>
                         <asp:CommandField ShowSelectButton="True" />
                         <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
-                        <asp:BoundField DataField="itemName" HeaderText="itemName" SortExpression="itemName" />
-                        <asp:BoundField DataField="itemCategory" HeaderText="itemCategory" SortExpression="itemCategory" />
-                        <asp:BoundField DataField="itemExpDate" HeaderText="itemExpDate" SortExpression="itemExpDate" />
+                        <asp:BoundField DataField="itemName" HeaderText="Item" SortExpression="itemName" />
+                        <asp:BoundField DataField="itemCategory" HeaderText="Category" SortExpression="itemCategory" />
+                        <asp:BoundField DataField="itemExpDate" HeaderText="Expiry Date" SortExpression="itemExpDate" />
                     </Columns>
                     <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
                     <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />
