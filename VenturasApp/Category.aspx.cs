@@ -39,6 +39,7 @@ namespace VenturasApp
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            lblCatID.Text = dgViewCat.SelectedRow.Cells[1].Text;
             txtName.Text = dgViewCat.SelectedRow.Cells[2].Text;
         }
 

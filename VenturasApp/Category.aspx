@@ -43,7 +43,7 @@
         </tr>
         <tr>
             <td style="width: 305px">
-                <asp:Label ID="lblCatID" runat="server"></asp:Label>
+                <asp:Label ID="lblCatID" runat="server" Visible="False"></asp:Label>
             </td>
             <td style="width: 327px">&nbsp;</td>
         </tr>
