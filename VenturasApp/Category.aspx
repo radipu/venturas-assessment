@@ -9,7 +9,7 @@
         </tr>
         <tr>
             <td colspan="4">
-                <asp:Label ID="lblTitle" runat="server" Text="Add New Category"></asp:Label>
+                <asp:Label ID="lblTitle" runat="server" Text="Add New Category" Font-Bold="True" Font-Size="X-Large"></asp:Label>
             </td>
         </tr>
         <tr>
@@ -20,12 +20,22 @@
                 <asp:TextBox ID="txtName" runat="server" Width="211px"></asp:TextBox>
             </td>
             <td colspan="2" rowspan="10">
-                <asp:GridView ID="dgViewCat" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="ID" DataSourceID="SqlDataSource1" Height="232px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="404px">
+                <asp:GridView ID="dgViewCat" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="ID" DataSourceID="SqlDataSource1" Height="232px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="404px" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical">
+                    <AlternatingRowStyle BackColor="#DCDCDC" />
                     <Columns>
                         <asp:CommandField ShowSelectButton="True" />
                         <asp:BoundField DataField="ID" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="ID" />
                         <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
                     </Columns>
+                    <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
+                    <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />
+                    <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+                    <RowStyle BackColor="#EEEEEE" ForeColor="Black" />
+                    <SelectedRowStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White" />
+                    <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                    <SortedAscendingHeaderStyle BackColor="#0000A9" />
+                    <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                    <SortedDescendingHeaderStyle BackColor="#000065" />
                 </asp:GridView>
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:dbcon %>" SelectCommand="SELECT * FROM [Categories]"></asp:SqlDataSource>
             </td>
