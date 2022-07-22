@@ -109,7 +109,6 @@
     <Content Include="App_Data\VenturasDB_log.ldf">
       <DependentUpon>VenturasDB.mdf</DependentUpon>
     </Content>
-    <Content Include="Calender.aspx" />
     <Content Include="Category.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -168,13 +167,6 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Calender.aspx.cs">
-      <DependentUpon>Calender.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Calender.aspx.designer.cs">
-      <DependentUpon>Calender.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Category.aspx.cs">
       <DependentUpon>Category.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

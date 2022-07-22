@@ -7,7 +7,7 @@
             <br />
             <br />
             <br />
-            <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Height="243px" Width="342px" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical">
+            <asp:GridView ID="gvDT" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns ="false" Width="391px">
                 <AlternatingRowStyle BackColor="#DCDCDC" />
                 <Columns>
                     <asp:BoundField DataField="Category" HeaderText="Category" SortExpression="Category" />
@@ -24,12 +24,6 @@
                 <SortedDescendingCellStyle BackColor="#CAC9C9" />
                 <SortedDescendingHeaderStyle BackColor="#000065" />
             </asp:GridView>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:dbcon %>" SelectCommand="SELECT Categories.Name AS Category, Items.itemName, Items.itemExpDate
-                FROM Categories
-                INNER JOIN Items
-                ON
-                Categories.Name = Items.itemCategory">
-            </asp:SqlDataSource>
         </div>
 </div>
 </asp:Content>
