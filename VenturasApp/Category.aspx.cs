@@ -85,13 +85,25 @@ namespace VenturasApp
                 using (con = new SqlConnection(cs))
                 {
                     con.Open();
-                    cmd = new SqlCommand("Update Categories Set Name=@Name Where ID=@catid", con);
-                    cmd.Parameters.AddWithValue("@Name", txtName.Text);
-                    cmd.Parameters.AddWithValue("@catid", lblCatID.Text);
-                    cmd.ExecuteNonQuery();
-                    con.Close();
-                    DataLoad();
-                    ClearAllData();
+                    SqlCommand sqlCMD = new SqlCommand("Select Categories.Name from Categories where Categories.Name = '" + txtName.Text + "'", con);
+                    adapter = new SqlDataAdapter(sqlCMD);
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+                    if (dt.Rows.Count > 0)
+                    {
+                        lblErrorMessage.Text = "WARNING! This category is already exists. Please insert a new category name.";
+                    }
+                    else
+                    {
+                        cmd = new SqlCommand("Update Categories Set Name=@Name Where ID=@catid", con);
+                        cmd.Parameters.AddWithValue("@Name", txtName.Text);
+                        cmd.Parameters.AddWithValue("@catid", lblCatID.Text);
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                        DataLoad();
+                        lblErrorMessage.Text = "";
+                        ClearAllData();
+                    }
                 }
             }
             else
