@@ -3,7 +3,7 @@
     <div class="row">
         <div>
             <h2>Output Page</h2>
-            <asp:Button ID="btnFilter" runat="server" Text="Click to Filter by Category" Width="173px" />
+            <asp:Button ID="btnFilter" runat="server" Text="Click to Filter by Category" Width="173px" OnClick="btnFilter_Click" />
             <br />
             <br />
             <br />
@@ -25,10 +25,11 @@
                 <SortedDescendingHeaderStyle BackColor="#000065" />
             </asp:GridView>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:dbcon %>" SelectCommand="SELECT Categories.Name AS Category, Items.itemName, Items.itemExpDate
-FROM Categories
-INNER JOIN Items
-ON
-Categories.Name = Items.itemCategory"></asp:SqlDataSource>
+                FROM Categories
+                INNER JOIN Items
+                ON
+                Categories.Name = Items.itemCategory">
+            </asp:SqlDataSource>
         </div>
 </div>
 </asp:Content>

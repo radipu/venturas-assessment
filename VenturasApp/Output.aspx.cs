@@ -13,5 +13,10 @@ namespace VenturasApp
         {
 
         }
+
+        protected void btnFilter_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

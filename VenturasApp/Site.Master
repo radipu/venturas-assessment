@@ -64,7 +64,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Venturas Assessment. Developed by <a href="https://cv.radipu.me/" target="_blank">radipu.</a></p>
+                <p>&copy; <%: DateTime.Now.Year %>. Venturas Assessment. Developed by <a href="https://cv.radipu.me/" target="_blank">radipu.</a></p>
             </footer>
         </div>
 

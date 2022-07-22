@@ -23,7 +23,7 @@
                 <asp:GridView ID="dgViewCat" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="ID" DataSourceID="SqlDataSource1" Height="232px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="404px" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical">
                     <AlternatingRowStyle BackColor="#DCDCDC" />
                     <Columns>
-                        <asp:CommandField ShowSelectButton="True" />
+                        <asp:CommandField ShowSelectButton="True" ButtonType="Button" />
                         <asp:BoundField DataField="ID" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="ID" />
                         <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
                     </Columns>
@@ -42,7 +42,10 @@
         </tr>
         <tr>
             <td style="width: 305px">&nbsp;</td>
-            <td style="width: 327px">&nbsp;</td>
+            <td style="width: 327px">
+                <asp:Label ID="lblErrorMessage" runat="server" ForeColor="#FF3300"></asp:Label>
+                <asp:Label ID="lblMessage" runat="server" ForeColor="#FF3300"></asp:Label>
+            </td>
         </tr>
         <tr>
             <td style="width: 305px">&nbsp;</td>
@@ -64,8 +67,7 @@
         <tr>
             <td style="width: 305px">&nbsp;</td>
             <td style="width: 327px">
-                <asp:Label ID="lblMessage" runat="server"></asp:Label>
-            </td>
+                &nbsp;</td>
         </tr>
         <tr>
             <td style="width: 305px">&nbsp;</td>
