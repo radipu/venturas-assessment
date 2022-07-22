@@ -24,6 +24,17 @@ namespace VenturasApp
 
         protected void btnFilter_Click(object sender, EventArgs e)
         {
+            BindData();
+        }
+
+        protected void gvDT_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            gvDT.PageIndex = e.NewPageIndex;
+            BindData();
+        }
+
+        protected void BindData()
+        {
             using (con = new SqlConnection(cs))
             {
                 con.Open();

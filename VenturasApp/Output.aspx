@@ -7,7 +7,7 @@
             <br />
             <br />
             <br />
-            <asp:GridView ID="gvDT" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns ="false" Width="391px">
+            <asp:GridView ID="gvDT" runat="server" AutoGenerateColumns ="false" Width="391px" AllowPaging="True" OnPageIndexChanging="gvDT_PageIndexChanging">
                 <AlternatingRowStyle BackColor="#DCDCDC" />
                 <Columns>
                     <asp:BoundField DataField="Category" HeaderText="Category" SortExpression="Category" />
